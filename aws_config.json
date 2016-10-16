@@ -1,0 +1,28 @@
+{
+  "IamFleetRole": "arn:aws:iam::645820146990:role/aws-ec2-spot-fleet-role",
+  "AllocationStrategy": "lowestPrice",
+  "TargetCapacity": 1,
+  "SpotPrice": "0.9",
+  "ValidFrom": "2016-10-14T06:52:49Z",
+  "ValidUntil": "2017-10-14T06:52:49Z",
+  "TerminateInstancesWithExpiration": true,
+  "LaunchSpecifications": [
+    {
+      "ImageId": "ami-ef9ed6f8",
+      "InstanceType": "p2.xlarge",
+      "KeyName": "CS109",
+      "SpotPrice": "0.9",
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/sda1",
+          "Ebs": {
+            "DeleteOnTermination": true,
+            "VolumeType": "gp2",
+            "VolumeSize": 60,
+            "SnapshotId": "snap-e7071c6c"
+          }
+        }
+      ]
+    }
+  ]
+}
